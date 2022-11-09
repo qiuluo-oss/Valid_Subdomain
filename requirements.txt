@@ -1,0 +1,5 @@
+httpx
+requests
+xlwt
+xlrd
+xlutils
