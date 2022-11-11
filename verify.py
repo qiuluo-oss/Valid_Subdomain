@@ -4,6 +4,7 @@ import requests
 import logging
 from concurrent.futures import ThreadPoolExecutor
 import time
+import datetime
 import threading
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 import xlwt
@@ -12,7 +13,7 @@ from xlutils.copy import copy
 logging.captureWarnings(True)
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
-start = time.time()
+start = datetime.datetime.now()
 lock = threading.Lock()
 savefilename = time.strftime("%Y-%m-%d %H.%M.%S")
 myxls = xlwt.Workbook()
@@ -96,5 +97,6 @@ with ThreadPoolExecutor(max_workers=500) as executor:
         executor.submit(
             write, url=urls
         )
-end = time.time()
-print(end - start)
+end = datetime.datetime.now()
+seconds = (end - start).seconds
+print(f"共耗时{seconds}秒")
