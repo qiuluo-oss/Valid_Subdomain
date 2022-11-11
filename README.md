@@ -9,7 +9,7 @@ pip3 install -r requirements.txt
 
 3、经华为云服务器测试，2500左右的域名需要2分钟就可以跑完，6100左右的域名需要10分钟。
 
-#使用截图
+# 使用截图
 
 ![image](https://user-images.githubusercontent.com/72497146/201284936-3618382d-3771-4080-a92b-87e0bd926156.png)
 
